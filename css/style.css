@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+/*font-family: 'Noto Sans KR', sans-serif;*/
+/*font-family: 'Play', sans-serif;*/
+
+/*===== FullScreen Background =====*/
+body { 
+    width:100%; height:100vh;
+    font-family: 'Noto Sans KR', sans-serif; font-size:18px; color:#fff;
+    background:#111 url(../img/cookierun.png) no-repeat ;
+    background-size:cover; 
+}
+
+/*====== header =====*/
+header { 
+    display:flex; justify-content: space-between; align-items: center; 
+}
