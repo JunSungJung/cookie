@@ -8,12 +8,32 @@
 /*===== FullScreen Background =====*/
 body { 
     width:100%; height:100vh;
-    font-family: 'Noto Sans KR', sans-serif; font-size:18px; color:#fff;
-    background:#111 url(../img/cookierun.png) no-repeat ;
+    font-family: 'Noto Sans KR', sans-serif; font-size:15px; color:#fff;
+    background:#111 url(../img/cookierun.png) no-repeat center;
     background-size:cover; 
+    overflow:hidden;
+}
+.circle { 
+    position:fixed; left:0px; top:-300px;
+    width:450px; height:450px;  background:linear-gradient(-45deg, red, blue); 
+    border-radius: 50%;
 }
 
 /*====== header =====*/
-header { 
-    display:flex; justify-content: space-between; align-items: center; 
+
+h1 { position:absolute; left:0; top:0; margin:50px 0 0 100px; z-index: 2; }
+h1 img { width:250px; }
+.menu  { 
+    position:fixed; left:0; top:300px; 
 }
+.menu > li { 
+    position:absolute;top:0; 
+    text-align: center;  
+}
+.menu > li:nth-child(1) { top:0;}
+.menu > li:nth-child(2) { top:50px;}
+.menu > li:nth-child(3) { top:100px;}
+.menu > li:nth-child(4) { top:150px;}
+.menu > li  a { font-size:15px; background:#36f; width:180px; padding:10px 0; }
+.menu ul { position:absolute; left:190px; top:0; background: #234; }
+
