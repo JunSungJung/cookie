@@ -5,35 +5,51 @@
 /*font-family: 'Noto Sans KR', sans-serif;*/
 /*font-family: 'Play', sans-serif;*/
 
-/*===== FullScreen Background =====*/
+
 body { 
-    width:100%; height:100vh;
-    font-family: 'Noto Sans KR', sans-serif; font-size:15px; color:#fff;
-    background:#111 url(../img/cookierun.png) no-repeat center;
-    background-size:cover; 
-    overflow:hidden;
-}
-.circle { 
-    position:fixed; left:0px; top:-300px;
-    width:450px; height:450px;  background:linear-gradient(-45deg, red, blue); 
-    border-radius: 50%;
+    font-family: 'Noto Sans KR', sans-serif; font-size:15px; 
+    background:#111; overflow: hidden; 
 }
 
-/*====== header =====*/
-
-h1 { position:absolute; left:0; top:0; margin:50px 0 0 100px; z-index: 2; }
-h1 img { width:250px; }
-.menu  { 
-    position:fixed; left:0; top:300px; 
+.wrap { 
+    position:fixed; width:100%; height: 100%;
+    perspective: 900px; overflow: hidden;
 }
-.menu > li { 
-    position:absolute;top:0; 
-    text-align: center;  
-}
-.menu > li:nth-child(1) { top:0;}
-.menu > li:nth-child(2) { top:50px;}
-.menu > li:nth-child(3) { top:100px;}
-.menu > li:nth-child(4) { top:150px;}
-.menu > li  a { font-size:15px; background:#36f; width:180px; padding:10px 0; }
-.menu ul { position:absolute; left:190px; top:0; background: #234; }
 
+/*===== trigger btn =====*/
+.btnMenu {
+    position:fixed; left:40px; top:50px; width:30px; height:30px;
+    font-size:32px; color: #f4f4f4; text-align:center; line-height: 30px;
+    animation:aniBtn 0.4s infinite alternate; z-index:3;
+}
+
+@keyframes aniBtn {
+    0% { color:#fff; transform: scale(1); opacity: 1; }
+    100% { color:#777; transform: scale(1.15); opacity: 0.75;  }
+}
+
+/*===== navigation bar =====*/
+nav {
+    position: fixed; width:150px; height:100%;
+    background:#e4e4e4; opacity: 0; z-index: 2;
+    transform:rotate3d(0, 1, 0, 120deg); transform-origin: left center;
+    transition:all 0.8s ease-in-out;
+}
+nav.on { transform:rotate3d(0, 1, 0, 15deg); opacity: 1; }
+nav h1 { position:absolute; left:50%; top:80px; width:100px; margin-left:-50px; }
+nav h1 img { width:100%; }
+nav ul { position:absolute; left:0; top:35%; width:100%; padding:0; }
+nav ul li { width:150px; }
+nav ul li a {
+    width:100%; 
+    font-size:18px; color:#000; text-align:center; line-height:4em; 
+}
+nav ul li a:hover { color:#fff; background:#000; }
+
+
+/*====== contents =====*/
+section {
+    position:fixed; width:100%; height:100%; background:#999;
+    transition:all 0.6s ease-out 0.3s; transform-origin: right center;
+}
+section.on { transform:rotate3d(0, 1, 0, -10deg); }
