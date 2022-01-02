@@ -11,16 +11,5 @@ $(document).ready(function(){
         $('section').removeClass('on');
     });
 
-    $('section').vegas({ 
-        slides:[
-            {src:'img/cookierun.png', 
-            video:{ 
-                src:['video/cookierunkingdom.mp4'], // 
-                loop:true,
-                mute:true, 
-                preload:true 
-            }
-            }
-        ]
-    });
+
 });
