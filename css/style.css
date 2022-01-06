@@ -111,12 +111,12 @@ section > div > p > video { width:100%; height:100%; background:#000; object-fit
 
 .box2 p:nth-child(5) img { position:absolute; left:0; top:0; opacity:0; }
 .box2.on p:nth-child(5) img  {
-    animation:fade1 5.5s ease-in alternate forwards;
+    animation:fade1 5.0s ease-in forwards;
 }
 
 .box2 p:nth-child(7) video { position:absolute; left:0; opacity: 0; }
 .box2.on p:nth-child(7) video { 
-    animation:fade2 7.0s ease-in alternate forwards;
+    animation:fade2 6.0s ease-in forwards;
 }
 
 .box2 p:nth-child(8) img { position: absolute; left:-2000px; }
