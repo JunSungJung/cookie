@@ -76,10 +76,7 @@ section > div > p > span {
 }
 section > div > p > video { width:100%; height:100%; background:#000; object-fit: cover; }
 
-section > div > p > a > i { font-size:50px; color:rgb(59, 89, 152); transition: all 0.4s ease-in; }
-section > div > p > a > i.fa-twitter-square { color:rgb(0, 172, 238); }
-section > div > p > a > i.fa-youtube-square { color:rgb(196, 48, 43); }
-section > div > p > a > i:hover { transform:scale(1.3); }
+
 
 /*===== box1 =====*/
 .box1 p { width:100%; height:100%;  }
@@ -87,11 +84,16 @@ section > div > p > a > i:hover { transform:scale(1.3); }
 
 /*===== box2 =====*/
 .box2 p:nth-child(1) { width:50%; background:#f1e2b4; }
-.box2 p:nth-child(2) { background:#ba835a; }
-
-.box2 p:nth-child(3) {  display: flex; justify-content: space-between; align-items: center; background:#f1e2b4; }
-
-.box2 p:nth-child(4) { float:right; width:50%; height:50%; background:#f26a25; }
+.box2 p:nth-child(2) {  background:#ba835a;  }
+.box2 p:nth-child(3) { 
+    padding:0 100px;
+    display: flex; justify-content: space-between;
+    align-items: center;
+    background:#f1e2b4; 
+}
+.box2 p:nth-child(4) { 
+    float:right; width:50%; height:50%; background:#f26a25;
+}
 .box2 p:nth-child(5) { float:right; background:#074c43; }
 .box2 p:nth-child(6) { float:right; background:#ba835a; }
 .box2 p:nth-child(7) { float:right; }
@@ -99,4 +101,67 @@ section > div > p > a > i:hover { transform:scale(1.3); }
 .box2 p:nth-child(9) { width:50%;  background:#f26a25;  }
 .box2 p:nth-child(10) { background: #0d4633; }
 .box2 p:nth-child(11) { background:#ba835a; }
+
+/*===== box2  animation =====*/
+.box2 p:nth-child(2) img { position: absolute; left:0; top:-500px; }
+.box2.on p:nth-child(2) img { animation:move1 1.5s alternate ease-in 1.5s forwards; }
+
+.box2 p:nth-child(4) img { position: absolute; left:2000px; }
+.box2.on p:nth-child(4) img { animation: move2 2.0s alternate ease-in 2.0s forwards; }
+
+.box2 p:nth-child(5) img { position:absolute; left:0; top:0; opacity:0; }
+.box2.on p:nth-child(5) img  {
+    animation:fade1 5.5s ease-in alternate forwards;
+}
+
+.box2 p:nth-child(7) video { position:absolute; left:0; opacity: 0; }
+.box2.on p:nth-child(7) video { 
+    animation:fade2 7.0s ease-in alternate forwards;
+}
+
+.box2 p:nth-child(8) img { position: absolute; left:-2000px; }
+.box2.on p:nth-child(8) img { animation: move3 2.5s alternate ease-in 2.5s forwards; }
+
+.box2 p:nth-child(10) img { position: absolute; left:0; bottom:-2000px; }
+.box2.on p:nth-child(10) img { animation: move4 3.0s alternate ease-in 3.0s forwards; }
+
+@keyframes move1 {
+    0% { top:-500px; }
+    100% { top:0;  }
+}
+
+@keyframes move2 {
+    0% { left:2000px; }
+    100% { left:0; }
+}
+
+@keyframes move3 {
+    0% { left:-2000px; }
+    100% { left:0; }
+}
+
+@keyframes move4 {
+    0% { bottom:-2000px }
+    100% { bottom:0; }
+}
+
+@keyframes fade1 {
+    0% { opacity:0; }
+
+    100% { opacity: 1; }
+}
+
+@keyframes fade2 {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+
+/*===== sns-btn=====*/
+.box2 p:nth-child(3)  > a { font-size:34px;  }
+.box2 p:nth-child(3)  > a i {transition: all 0.4s ease-in;}
+.box2 p:nth-child(3)  > a > i { 
+    color:#915f3e; opacity: 0.5;   }
+.box2 p:nth-child(3)  > a > i:hover { transform:scale(1.3); opacity: 1; }
+
+
 /*===== box3 =====*/
