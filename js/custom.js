@@ -13,4 +13,6 @@ $(document).ready(function(){
         $('section > div').removeClass('on');
         $('section > div').eq(index).addClass('on');
     });
+
+
 });
