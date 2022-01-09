@@ -187,7 +187,7 @@ article img { width:100%; height:200px; }
 article a { 
     position:absolute; left:37%; bottom: 66px;
     width:60px; padding:5px; text-align: center; 
-    color:#fff; background:#0d4633; display: none;
+    color:#fff; background:#0d4633; visibility: hidden;
 }
 article h3 { 
     width:100%; margin: 0 auto; padding-bottom:5px; 
@@ -199,4 +199,7 @@ article p {
     color:#fff;
 }
 
+
+article:hover img { opacity:0.5; }
+article:hover a { visibility:visible; }
 
