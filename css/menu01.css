@@ -244,7 +244,12 @@ body {
         border: 1px solid #eae7e2; border-top: 0;
     }
 
-    .sns p { width:100%; padding-top:10px; background:#36f; }
+    .sns ul { 
+        display:flex; justify-content:space-between; align-items: center; 
+        padding:5px 100px;
+    }
+
+    .sns p { width:100%; padding-top:10px;  }
 
     .sns i {
         float:left;  font-size:20px; 
