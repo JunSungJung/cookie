@@ -10,29 +10,7 @@ body {
     background:#f26a25;
 }
 
-
-
-/*===== title =====*/
-.bg { 
-    width:70%;  margin:0 auto; 
-    background:#fff;
-    text-align: center;
-    display:flex;
-    flex-direction: column;
-    min-width:800px
-}
-
-.txtcon { 
-    width:70%; padding-top:50px;
-    margin:0 auto;
-}
-
 h2 { font-size:15px; font-weight: 900; background:#ecefe4; }
-
-.sns { 
-    display:flex; justify-content:space-between; align-items: center;
-    padding: 10px 50px; border: 1px solid #eae7e2; border-top: 0;
-}
 
 .sns i {
     float:left; padding:0 15px; font-size:20px; 
@@ -51,16 +29,6 @@ h2 { font-size:15px; font-weight: 900; background:#ecefe4; }
 
 
 /*===== content =====*/
-.content {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin:0 auto; padding-top:50px;
-    border:1px solid #eae7e2; border-top: 0;
-    width:70%;
-}
-
 .content img { width:80%; }
 
 
@@ -68,11 +36,12 @@ h2 { font-size:15px; font-weight: 900; background:#ecefe4; }
 /*===== carefully =====*/
 .content h3 { 
     width:80%; padding:30px 0; text-align:left; padding-left:30px;
-    color:#fff; background:#0d4633;   
+    color:#fff; background:#0d4633;  
 }
 .content ul { 
-    width:80%; margin-bottom:50px; padding:0 30px;
-    color:#fff; background:#0d4633; 
+    width:80%; margin-bottom:50px; 
+    color:#fff; background:#0d4633;  
+    padding:0 30px;
 }
 .content ul li { float:none; width:100%; text-align: left; }
 
@@ -81,8 +50,6 @@ h2 { font-size:15px; font-weight: 900; background:#ecefe4; }
 
 
 /*===== underbox =====*/
-.menucon { width:70%;  margin:0 auto;  }
-
 .menucon article { display:flex;  border: 1px solid #ecefe4; border-top:0; }
 
 .menucon article h5 { 
@@ -109,4 +76,132 @@ h2 { font-size:15px; font-weight: 900; background:#ecefe4; }
 .menubtn:hover {
     background:#0d4633; color:#fff;
     border-bottom:1px solid #fff;
+}
+
+
+@media screen and (min-width:1024px){
+    /*===== title =====*/
+    .bg { 
+        display:flex;
+        flex-direction: column;
+        width:70%;  margin:0 auto; 
+        background:#fff;
+        text-align: center;
+    }
+
+    .txtcon { 
+        width:70%; padding-top:50px;
+        margin:0 auto;
+    }
+
+    .sns { 
+        display:flex; justify-content:space-between; align-items: center;
+        padding: 10px 50px; border: 1px solid #eae7e2; border-top: 0;
+    }
+
+
+
+    /*===== content =====*/
+    .content {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin:0 auto; padding-top:50px;
+        border:1px solid #eae7e2; border-top: 0;
+        width:70%;
+    }
+
+
+
+    /*===== underbox =====*/
+    .menucon { width:70%;  margin:0 auto;  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    /*===== title =====*/
+    .bg { 
+        width:80%;  margin:0 auto; 
+        background:#fff;
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+        
+    }
+
+    .txtcon { 
+        width:80%; padding-top:50px;
+        margin:0 auto;
+    }
+
+    .sns { 
+        display:flex; justify-content:space-between; align-items: center;
+        padding: 10px 50px; border: 1px solid #eae7e2; border-top: 0;
+    }
+
+
+
+    /*===== content =====*/
+    .content {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin:0 auto; padding-top:50px;
+        border:1px solid #eae7e2; border-top: 0;
+        width:80%;
+    }
+
+
+
+    /*===== underbox =====*/
+    .menucon { width:80%;  margin:0 auto;  }
+}
+
+
+
+@media screen and (max-width:767px) {
+    /*===== title =====*/
+    .bg { 
+        display:flex;
+        flex-direction: column;
+        width:100%; margin:0 auto; 
+        background:#fff;
+        text-align: center;
+    }
+
+    .txtcon { 
+        width:90%; padding-top:50px;
+        margin:0 auto;
+    }
+
+    .sns { 
+        height:60px;
+        border: 1px solid #eae7e2; border-top: 0;
+    }
+
+    .sns ul { 
+        display:flex; justify-content:space-between; align-items: center; 
+        width:70%; margin:5px auto 0; 
+    }
+
+    .sns p { width:100%; padding-top:10px;  }
+
+
+
+    /*===== content =====*/
+    .content {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin:0 auto; padding-top:50px;
+        border:1px solid #eae7e2; border-top: 0;
+        width:90%;
+    }
+
+
+
+    /*===== underbox =====*/
+    .menucon { width:90%;  margin:0 auto;  }
 }
